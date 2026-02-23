@@ -7,5 +7,6 @@ public class FahrenheitToCelsius
       double degC = (5.0/9)*(degF-32);
       
       System.out.printf("%.1f degF is %.1f degC",degF,degC);
+      
    }
 }
