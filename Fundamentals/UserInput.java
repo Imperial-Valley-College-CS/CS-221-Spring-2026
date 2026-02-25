@@ -10,6 +10,10 @@ public class UserInput
       System.out.print("What is your name? ");
       String yourName = scan.nextLine();
       
+      System.out.print("How old are you? ");
+      int yourAge = scan.nextInt();
+      
       System.out.println( yourName );
+      System.out.println( yourAge );
    }
 }
