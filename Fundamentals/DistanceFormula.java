@@ -16,5 +16,15 @@ public class DistanceFormula
       System.out.print("Enter location y2: ");
       double y2 = scan.nextDouble();
       
+      double dx = x2-x1;
+      double dy = y2-y1;
+      
+      double a = dx*dx;
+      double b = Math.pow(dy,2);
+      
+      double dist = Math.sqrt(a+b);
+      
+      System.out.printf("The distance between (%.2f,%.2f) and (%.2f,%.2f) is %.2f",x1,y1,x2,y2,dist);
+      
    }//end main
 }//end class
