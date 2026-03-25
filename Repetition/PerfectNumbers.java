@@ -2,7 +2,7 @@ public class PerfectNumbers
 {
    public static void main(String[] args)
    {
-      int x = 1;
+      int x = 0;
       while ( x <= 10000 )
       {
          boolean ans = isPerfect(x);
@@ -25,6 +25,9 @@ public class PerfectNumbers
          x++;
       }
       
-      return num == sum;
+      if( num == sum && num != 0 )
+         return true;
+         
+      return false;
    }
 }
