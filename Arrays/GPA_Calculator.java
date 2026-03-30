@@ -15,15 +15,29 @@ public class GPA_Calculator
       for(int i = 0; i < grades.length; i++ )
       {
          System.out.print("Enter grade of next class: " );
-         grades[i] = scan.next().charAt(0);
+         grades[i] = scan.next().toUpperCase().charAt(0);
       }
+      
+      double gpa = calcGPA(grades);
+      System.out.println( gpa );
    }
    
-   public static double calcGPA(int[] arr)
+   public static double calcGPA(char[] arr)
    {
       //calcGPA will traverse arr to add all grade points 
          //and divide their sum by length of array
       //calcGPA will return the average of the elements (gpa)
-      return 0.0;
+      double sum = 0.0;
+      for( int i = 0; i < arr.length; i++ )
+      {
+         switch(arr[i])
+         {
+            case 'A': sum += 4.0; break;
+            case 'B': sum += 3.0; break;
+            case 'C': sum += 2.0; break;
+            case 'D': sum += 1.0; break;
+         }
+      }
+      return sum/arr.length;
    }
 }
