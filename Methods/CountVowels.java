@@ -4,6 +4,7 @@ public class CountVowels
 {
    public static void main(String[] args)
    {
+      System.out.println( args[0] + " " + args[1] );
       Scanner scan = new Scanner(System.in);
       System.out.print("What is your favorite superhero? ");
       String supe = scan.nextLine();
