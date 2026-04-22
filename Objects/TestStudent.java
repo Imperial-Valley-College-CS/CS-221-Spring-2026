@@ -6,6 +6,9 @@ public class TestStudent
       stu.displayInfo();
       stu.setName("Liv Phillips");
       stu.displayInfo();
+      
+      char[] grades = {'A', 'a', 'B', 'a', 'A'};
+      stu.setGrades( grades );
       System.out.println( stu.getGPA() );
    }
 }
