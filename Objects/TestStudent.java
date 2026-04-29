@@ -10,5 +10,6 @@ public class TestStudent
       char[] grades = {'A', 'a', 'B', 'a', 'A'};
       stu.setGrades( grades );
       System.out.println( stu.getGPA() );
+      System.out.println( stu );
    }
 }

@@ -52,4 +52,10 @@ public class Student
       
       this.gpa = sum/this.grades.length;
    }
+   
+   @Override
+   public String toString()
+   {
+      return "Name: " + this.name + "\nAge: " + this.age;
+   }
 }
