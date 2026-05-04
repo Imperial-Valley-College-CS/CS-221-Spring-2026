@@ -9,7 +9,20 @@ public class Crab extends Invader
       super(x,y);
       super.health = this.crabFiles.length;
       super.color = Color.CRIMSON;    //CRIMSON
-      super.filename = "InvaderMatrices" + crabFiles[0];
+      super.filename = super.matrixFolder + crabFiles[0];
       setBody();
+   }
+   
+   @Override
+   public boolean hit()
+   {
+      if( super.hit() )      //invoke hit method from Invader
+      {
+         //reset body of invader
+         int index = this.crabFiles.length - super.health;
+         super.filename = super.matrixFolder + this.crabFiles[index];
+         setBody();
+      }
+      return super.isAlive;
    }
 }

@@ -7,10 +7,11 @@ public class Invader
 {
    protected int health, speedX, speedY;
    protected Color color;
-   protected boolean[][] body;
+   protected boolean[][] body = new boolean[8][12];
    protected boolean isAlive;
    protected Position pos;
    protected String filename;
+   protected String matrixFolder = "InvaderMatrices";
    
    public Invader(double x, double y)
    {
@@ -19,6 +20,20 @@ public class Invader
       this.isAlive = true;
       this.speedX = 2;
       this.speedY = 4;
+   }
+   
+   public boolean[][] getBody(){ return this.body; }
+   public Color getColor(){ return this.color; }
+   public Position getPosition(){ return this.pos; }
+   public boolean alive(){ return this.isAlive; }
+   
+   public boolean hit()
+   {
+      this.health--;
+      if( this.health <= 0 )
+         this.isAlive = false;
+         
+      return this.isAlive;
    }
    
    public void setBody()
