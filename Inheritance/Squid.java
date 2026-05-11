@@ -8,6 +8,7 @@ public class Squid extends Invader
    {
       //must be first line of code in constructor
       super(x,y);    //reference to constructor of super class
+      
       super.health = squidFiles.length;
       super.color = Color.rgb(181, 57, 184);    //purple
       super.filename = "InvaderMatrices" + squidFiles[0];
