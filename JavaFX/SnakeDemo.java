@@ -3,6 +3,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
+import javafx.animation.AnimationTimer;
 
 public class SnakeDemo extends Application
 {
